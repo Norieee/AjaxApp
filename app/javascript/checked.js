@@ -6,10 +6,10 @@ function check() {
   postsA = Array.from(posts);
  
   postsA.forEach(function (post) {
-      if (post.getAttribute("data-load") != null) {
+    if (post.getAttribute("data-load") != null) {
        return null;
-     }
-     post.setAttribute("data-load", "true");
+    }
+    post.setAttribute("data-load", "true");
     // 投稿をクリックした場合に実行する処理を定義している
     post.addEventListener("click", (e) => {
       // どの投稿をクリックしたのか、カスタムデータを利用して取得している
@@ -23,7 +23,7 @@ function check() {
  
       // レスポンスのタイプを指定する
       XHR.responseType = "json";
- 
+
       // sendでリクエストを送信する
       XHR.send();
  
